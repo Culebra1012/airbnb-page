@@ -1,0 +1,33 @@
+@use  'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.barra{
+    display: none;
+
+    @include m.tablet{ 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+     }
+
+     &__navegacion{
+         @include m.tablet{ 
+            display: flex;
+            gap: 4rem;               
+          }
+
+     }
+     &__link{
+         color: v.$primario;
+         font-weight: 700;
+         text-transform: uppercase;
+     }
+
+     &__nombre{
+         color: v.$primario;
+         margin: 0;
+         font-weight: 700;
+         text-transform: uppercase;
+     }
+}
